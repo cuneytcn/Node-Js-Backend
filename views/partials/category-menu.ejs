@@ -1,0 +1,7 @@
+<ul class="list-group list-group-numbered">
+    <% categories.forEach(category=> {%>
+        <li class="list-group-item <%= selectedCategory == category.id ? "active" : "" %>">
+            <a href="/blog/category/<%= category.id %>" class="<%= selectedCategory == category.id ? "text-white" : "text-black" %>"><%= category.title %></a>
+        </li>
+    <%}) %>
+</ul>

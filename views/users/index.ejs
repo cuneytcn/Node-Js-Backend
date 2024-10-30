@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<%- include('../partials/head.ejs') %>
+</head>
+
+<body>
+	<%- include('../partials/nav.ejs') %>
+	<main>
+		<div class="container mt-5">
+			<div class="row">
+				<h2 class="mb-4">
+					<%= title %>
+				</h2>
+
+				<div class="col co1l-md-3">
+					<%- include('../partials/category-menu.ejs' , categories) %>
+				</div>
+
+				<div class="col col-md-9">
+					<% blogs.forEach(blog=> { %>
+							<%- include('../partials/blog-card.ejs' , blog) %>
+					<% }) %>
+				</div>
+			</div>
+		</div>
+	</main>
+</body>
+
+</html>
